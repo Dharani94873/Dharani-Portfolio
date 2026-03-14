@@ -2,7 +2,7 @@
 
 A modern, fully responsive personal portfolio website built with **React**, **Vite**, **Tailwind CSS v4**, and **Framer Motion**.
 
-🔗 **Live Site:** [dharani-portfolio-q3ww.vercel.app](https://dharani-portfolio-q3ww.vercel.app)
+🔗 **Live Site:** [dharani-portfolio-q3ww.vercel.app](https://dharanim.vercel.app)
 
 ---
 
