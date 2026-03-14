@@ -171,7 +171,7 @@ function App() {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className={`transition-colors ${activeSection === link.toLowerCase() ? 'text-primary font-semibold' : 'text-slate-500 hover:text-primary'}`}
+                className={`transition-colors ${activeSection === link.toLowerCase() ? 'text-primary font-semibold' : 'text-slate-700 hover:text-primary'}`}
               >
                 {link}
               </a>
@@ -274,7 +274,7 @@ function App() {
                   className="text-center"
                 >
                   <div className="text-3xl font-extrabold gradient-text">{s.value}</div>
-                  <div className="text-xs text-slate-500 font-medium mt-1">{s.label}</div>
+                  <div className="text-xs text-slate-700 font-medium mt-1">{s.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -299,7 +299,7 @@ function App() {
             >
               <span className="text-2xl">💻</span>
               <div>
-                <div className="text-xs text-slate-400 font-medium">Currently working on</div>
+                <div className="text-xs text-slate-600 font-medium">Currently working on</div>
                 <div className="text-sm text-slate-700 font-bold">Portfolio v2</div>
               </div>
             </motion.div>
@@ -326,13 +326,13 @@ function App() {
               ))}
             </div>
             <div className="flex gap-4 mt-8">
-              <a href="https://github.com/" target="_blank" rel="noreferrer" className="p-3 bg-white rounded-xl text-slate-400 hover:text-primary hover:shadow-lg transition-all border border-slate-100">
+              <a href="https://github.com/" target="_blank" rel="noreferrer" className="p-3 bg-white rounded-xl text-slate-600 hover:text-primary hover:shadow-lg transition-all border border-slate-100">
                 <FiGithub size={22} />
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="p-3 bg-white rounded-xl text-slate-400 hover:text-primary hover:shadow-lg transition-all border border-slate-100">
+              <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="p-3 bg-white rounded-xl text-slate-600 hover:text-primary hover:shadow-lg transition-all border border-slate-100">
                 <FiLinkedin size={22} />
               </a>
-              <a href="mailto:dharani94873@gmail.com" className="p-3 bg-white rounded-xl text-slate-400 hover:text-primary hover:shadow-lg transition-all border border-slate-100">
+              <a href="mailto:dharani94873@gmail.com" className="p-3 bg-white rounded-xl text-slate-600 hover:text-primary hover:shadow-lg transition-all border border-slate-100">
                 <FiMail size={22} />
               </a>
             </div>
@@ -352,7 +352,7 @@ function App() {
               >
                 <div className="text-3xl text-primary mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
                 <h3 className="text-lg font-bold mb-2 text-slate-800">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-slate-700 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -386,16 +386,16 @@ function App() {
                 <div className="p-7 flex flex-col flex-1">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, j) => (
-                      <span key={j} className="px-3 py-1 bg-slate-50 text-slate-500 text-xs font-bold rounded-full uppercase tracking-wider">{tag}</span>
+                      <span key={j} className="px-3 py-1 bg-slate-50 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider">{tag}</span>
                     ))}
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-slate-900">{project.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1">{project.desc}</p>
+                  <p className="text-slate-700 text-sm leading-relaxed mb-6 flex-1">{project.desc}</p>
                   <div className="flex gap-4">
                     <a href={project.link} className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all text-sm">
                       Live Demo <FiExternalLink />
                     </a>
-                    <a href={project.github} className="flex items-center gap-2 text-slate-400 font-bold hover:text-slate-600 transition-all text-sm">
+                    <a href={project.github} className="flex items-center gap-2 text-slate-600 font-bold hover:text-slate-600 transition-all text-sm">
                       <FiGithub /> Code
                     </a>
                   </div>
@@ -435,7 +435,7 @@ function App() {
                     <span className="text-xs font-bold text-primary/70 uppercase tracking-wide">{edu.period}</span>
                     <h4 className="text-lg font-bold text-slate-800 mt-1">{edu.degree}</h4>
                     <p className="text-primary font-semibold text-sm mb-2">{edu.school}</p>
-                    <p className="text-slate-500 text-sm">{edu.detail}</p>
+                    <p className="text-slate-700 text-sm">{edu.detail}</p>
                   </motion.div>
                 ))}
               </div>
@@ -462,7 +462,7 @@ function App() {
                     </div>
                     <div>
                       <div className="font-bold text-slate-800 text-sm">{cert.name}</div>
-                      <div className="text-slate-400 text-xs mt-0.5">{cert.org}</div>
+                      <div className="text-slate-600 text-xs mt-0.5">{cert.org}</div>
                     </div>
                   </motion.div>
                 ))}
@@ -478,7 +478,7 @@ function App() {
                 <div className="text-3xl mb-3">🚀</div>
                 <h4 className="text-lg font-bold text-slate-800">Student Developer</h4>
                 <p className="text-primary font-semibold text-sm mb-2">Open Source · 2024 – Present</p>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-slate-700 text-sm leading-relaxed">
                   Building AI tools, contributing to open-source projects, and freelancing web development projects for small businesses.
                 </p>
               </motion.div>
@@ -514,7 +514,7 @@ function App() {
                       className="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow-sm hover:shadow-md transition-all cursor-default group"
                     >
                       <div className="text-4xl filter grayscale group-hover:grayscale-0 transition-all duration-300">{skill.icon}</div>
-                      <span className="text-xs font-semibold text-slate-500 group-hover:text-slate-700 transition-colors">{skill.name}</span>
+                      <span className="text-xs font-semibold text-slate-700 group-hover:text-slate-700 transition-colors">{skill.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -540,7 +540,7 @@ function App() {
                   <FiMail className="text-2xl" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-slate-400 uppercase tracking-wide">Email</div>
+                  <div className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Email</div>
                   <span className="font-semibold">dharani94873@gmail.com</span>
                 </div>
               </a>
@@ -549,7 +549,7 @@ function App() {
                   <FiGithub className="text-2xl" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-slate-400 uppercase tracking-wide">GitHub</div>
+                  <div className="text-xs font-semibold text-slate-600 uppercase tracking-wide">GitHub</div>
                   <span className="font-semibold">github.com/dharanidharan</span>
                 </div>
               </a>
@@ -558,7 +558,7 @@ function App() {
                   <FiLinkedin className="text-2xl" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-slate-400 uppercase tracking-wide">LinkedIn</div>
+                  <div className="text-xs font-semibold text-slate-600 uppercase tracking-wide">LinkedIn</div>
                   <span className="font-semibold">linkedin.com/in/dharanidharan</span>
                 </div>
               </a>
@@ -644,26 +644,26 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
           <div>
             <div className="text-2xl font-bold gradient-text mb-3">Dharanidharan</div>
-            <p className="text-slate-400 text-sm max-w-xs">Building the future of the web, one component at a time.</p>
+            <p className="text-slate-600 text-sm max-w-xs">Building the future of the web, one component at a time.</p>
           </div>
-          <div className="flex justify-center gap-6 text-sm font-medium text-slate-500">
+          <div className="flex justify-center gap-6 text-sm font-medium text-slate-700">
             {['About', 'Projects', 'Skills', 'Contact'].map(link => (
               <a key={link} href={`#${link.toLowerCase()}`} className="hover:text-primary transition-colors">{link}</a>
             ))}
           </div>
           <div className="flex flex-col items-center md:items-end gap-3">
             <div className="flex gap-3">
-              <a href="https://github.com/" target="_blank" rel="noreferrer" className="p-3 bg-slate-50 rounded-xl text-slate-400 hover:text-primary hover:bg-white hover:shadow-md transition-all border border-slate-100">
+              <a href="https://github.com/" target="_blank" rel="noreferrer" className="p-3 bg-slate-50 rounded-xl text-slate-600 hover:text-primary hover:bg-white hover:shadow-md transition-all border border-slate-100">
                 <FiGithub />
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="p-3 bg-slate-50 rounded-xl text-slate-400 hover:text-primary hover:bg-white hover:shadow-md transition-all border border-slate-100">
+              <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="p-3 bg-slate-50 rounded-xl text-slate-600 hover:text-primary hover:bg-white hover:shadow-md transition-all border border-slate-100">
                 <FiLinkedin />
               </a>
-              <a href="mailto:dharani94873@gmail.com" className="p-3 bg-slate-50 rounded-xl text-slate-400 hover:text-primary hover:bg-white hover:shadow-md transition-all border border-slate-100">
+              <a href="mailto:dharani94873@gmail.com" className="p-3 bg-slate-50 rounded-xl text-slate-600 hover:text-primary hover:bg-white hover:shadow-md transition-all border border-slate-100">
                 <FiMail />
               </a>
             </div>
-            <p className="text-slate-400 text-xs">© {new Date().getFullYear()} Dharanidharan. Built with React &amp; Vite.</p>
+            <p className="text-slate-600 text-xs">© {new Date().getFullYear()} Dharanidharan. Built with React &amp; Vite.</p>
           </div>
         </div>
       </footer>
