@@ -474,7 +474,7 @@ function App() {
               >
                 <div className="text-3xl mb-3">🚀</div>
                 <h4 className="text-lg font-bold text-slate-800">Student Developer</h4>
-                <p className="text-primary font-semibold text-sm mb-2">Freelance / Open Source · 2022 – Present</p>
+                <p className="text-primary font-semibold text-sm mb-2">Open Source · 2024 – Present</p>
                 <p className="text-slate-500 text-sm leading-relaxed">
                   Building AI tools, contributing to open-source projects, and freelancing web development projects for small businesses.
                 </p>
