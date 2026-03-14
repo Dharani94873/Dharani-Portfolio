@@ -109,9 +109,9 @@ const education = [
   },
   {
     degree: 'Higher Secondary Education (12th)',
-    school: 'Sri Vidhya Mandir HSS',
+    school: 'Pem School of Excellence',
     period: '2021 – 2023',
-    detail: 'Completed with distinction — Maths, Physics, Chemistry & Computer Science stream.',
+    detail: 'CBSE School — Completed with distinction in Maths, Physics, Chemistry & Computer Science.',
     color: 'bg-secondary',
   },
 ];
