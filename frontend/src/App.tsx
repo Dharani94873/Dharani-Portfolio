@@ -11,6 +11,9 @@ import {
   SiLinux, SiReact, SiFastapi, SiGit
 } from 'react-icons/si';
 import heroImage from './assets/myimage2.png';
+import projectDyslexia from './assets/project_dyslexia.png';
+import projectPortfolio from './assets/project_portfolio.png';
+import projectTaskManager from './assets/project_taskmanager.png';
 
 /* ─── DATA ─────────────────────────────────────────────────────────────── */
 
@@ -75,8 +78,7 @@ const projects = [
     title: 'Helper for Dyslexia',
     desc: 'An AI-powered tool designed to assist dyslexic students with reading and comprehension using NLP.',
     tags: ['React', 'Python', 'Tailwind'],
-    gradient: 'from-violet-500/30 to-indigo-500/30',
-    icon: '🧠',
+    image: projectDyslexia,
     link: '#',
     github: '#',
   },
@@ -84,8 +86,7 @@ const projects = [
     title: 'Personal Portfolio',
     desc: 'A high-performance personal website built with Vite, React, Tailwind v4 & Framer Motion.',
     tags: ['React', 'Vite', 'Framer Motion'],
-    gradient: 'from-pink-500/30 to-rose-500/30',
-    icon: '🌐',
+    image: projectPortfolio,
     link: '#',
     github: '#',
   },
@@ -93,8 +94,7 @@ const projects = [
     title: 'Task Management System',
     desc: 'A robust backend system for managing complex workflows and team collaboration with real-time updates.',
     tags: ['FastAPI', 'MongoDB', 'React'],
-    gradient: 'from-emerald-500/30 to-teal-500/30',
-    icon: '📋',
+    image: projectTaskManager,
     link: '#',
     github: '#',
   },
@@ -366,9 +366,13 @@ function App() {
                 className="bg-white border-2 border-slate-100 hover:border-primary/40 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_60px_-10px_rgba(100,80,255,0.25)] transition-all duration-300 group flex flex-col cursor-pointer"
               >
                 {/* Thumbnail */}
-                <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
-                  <span className="text-7xl group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 drop-shadow-lg">{project.icon}</span>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent group-hover:from-black/20 transition-all duration-300" />
+                <div className="h-48 relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/30 transition-all duration-300" />
                   {/* Hover overlay */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-primary/10 backdrop-blur-[2px]">
                     <span className="bg-white/90 text-primary font-bold text-sm px-4 py-2 rounded-full shadow-lg">View Project →</span>
