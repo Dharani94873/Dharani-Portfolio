@@ -111,7 +111,7 @@ const education = [
   {
     degree: 'Higher Secondary Education (12th)',
     school: 'Pem School of Excellence',
-    period: '2021 – 2023',
+    period: '2022 – 2024',
     detail: 'CBSE School — Completed with distinction in Maths, Physics, Chemistry & Computer Science.',
     color: 'bg-secondary',
   },
