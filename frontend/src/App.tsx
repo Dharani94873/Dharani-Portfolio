@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   FiGithub, FiMail, FiLinkedin, FiArrowRight, FiCode,
@@ -128,6 +129,8 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showTop, setShowTop] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -563,13 +566,33 @@ function App() {
 
             {/* Contact form */}
             <form
+              ref={formRef}
               className="glass p-10 rounded-3xl border border-slate-100 shadow-lg space-y-4"
-              onSubmit={(e) => { e.preventDefault(); alert('Message sent! (Demo)'); }}
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (!formRef.current) return;
+                setFormStatus('sending');
+                try {
+                  await emailjs.sendForm(
+                    'service_tsff6b3',
+                    'template_tj8fe0q',
+                    formRef.current,
+                    'DKnHtwizuTzTDww1L'
+                  );
+                  setFormStatus('success');
+                  formRef.current.reset();
+                  setTimeout(() => setFormStatus('idle'), 4000);
+                } catch {
+                  setFormStatus('error');
+                  setTimeout(() => setFormStatus('idle'), 4000);
+                }
+              }}
             >
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">Name</label>
                 <input
                   type="text"
+                  name="from_name"
                   required
                   placeholder="Your Name"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all font-medium"
@@ -579,6 +602,7 @@ function App() {
                 <label className="block text-sm font-bold text-slate-700 mb-2">Email</label>
                 <input
                   type="email"
+                  name="from_email"
                   required
                   placeholder="your@email.com"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all font-medium"
@@ -588,6 +612,7 @@ function App() {
                 <label className="block text-sm font-bold text-slate-700 mb-2">Message</label>
                 <textarea
                   rows={4}
+                  name="message"
                   required
                   placeholder="How can I help you?"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all font-medium resize-none"
@@ -595,9 +620,19 @@ function App() {
               </div>
               <button
                 type="submit"
-                className="w-full py-4 bg-primary text-white rounded-xl font-bold hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all"
+                disabled={formStatus === 'sending'}
+                className={`w-full py-4 rounded-xl font-bold transition-all ${
+                  formStatus === 'success'
+                    ? 'bg-emerald-500 text-white'
+                    : formStatus === 'error'
+                    ? 'bg-red-500 text-white'
+                    : 'bg-primary text-white hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5'
+                } disabled:opacity-70 disabled:cursor-not-allowed`}
               >
-                Send Message 🚀
+                {formStatus === 'sending' && '⏳ Sending...'}
+                {formStatus === 'success' && '✅ Message Sent!'}
+                {formStatus === 'error' && '❌ Failed — Try Again'}
+                {formStatus === 'idle' && 'Send Message 🚀'}
               </button>
             </form>
           </div>
