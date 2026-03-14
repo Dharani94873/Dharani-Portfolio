@@ -291,17 +291,6 @@ function App() {
             <div className="relative rounded-3xl overflow-hidden glass shadow-2xl border border-white/50 bg-white/20 hover:scale-[1.02] transition-transform duration-500">
               <img src={heroImage} alt="Dharanidharan" className="w-full h-auto object-cover max-h-[560px]" />
             </div>
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-              className="absolute -bottom-4 -left-4 bg-white px-5 py-3 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3"
-            >
-              <span className="text-2xl">💻</span>
-              <div>
-                <div className="text-xs text-slate-600 font-medium">Currently working on</div>
-                <div className="text-sm text-slate-700 font-bold">Portfolio v2</div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </section>
