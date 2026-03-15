@@ -15,7 +15,7 @@ A modern, fully responsive personal portfolio website built with **React**, **Vi
 - 🎭 **Framer Motion** animations throughout
 - 🖱️ **Project card hover effects** — glow border, icon zoom, overlay reveal
 - 📬 **Working contact form** via EmailJS (sends real emails)
-- 📄 **Resume download** button
+- 📄 **Resume download** buttonhi
 - ⬆️ **Back to Top** floating button
 - 🔍 **SEO optimized** — meta tags, Open Graph, Google Fonts
 

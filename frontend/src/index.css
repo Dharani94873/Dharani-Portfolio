@@ -43,6 +43,14 @@ body {
 
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent font-bold;
+    background-size: 200% auto;
+    animation: gradientShift 3s linear infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .section-title {
